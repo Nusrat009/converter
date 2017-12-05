@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="converter.js">
+    </script>
+    <title>Converter</title>
+    <link rel="stylesheet" type="text/css" href="converter.css">
+</head>
+
+<body style="background-color:skyblue;">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                <div class="navbar-header">
+                <a class="navbar-brand" href="converter.html"><h2 style="color:cyan;margin-top:0px;"><b><i>CONVERSIONs</i></b></h2></a>
+                </div>
+                </div>
+                </nav>
+
+
+    <div class="container">
+        <h1 style="color:navy;margin-top:60px;margin-left:15px;"><b>CONVERTER</b></h1>
+
+        
+        <div class="row">
+            <div class="col-md-10">
+             <div class="col-md-12" id="cf">
+        <button class="btn btn-primary btn-lg col-md-5" data-toggle="modal" data-target="#mymodal">celsius to fahrenheit</button>
+        <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="mymodallabel" aria-hidden="true">
+
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                            &times;
+                                    </button>
+                        <h2 class="modal-title" id="mymodallabel" style="color:navy;">Celsius to Fahrenheit converter</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p><b>Please enter value: </b></p> <br>
+                        <input type="text" name="celsi" id="txt1" placeholder="enter celsius value" />
+                        <button type="button" name="submit" id="button1" onclick="celtofah()">See Result</button><br> <br>
+                        <p id="cel1"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="converter.html">Click here for going HomePage</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col-sm-2"></div>  
+        <button class="btn btn-primary btn-lg col-md-5" data-toggle="modal" data-target="#mymodal1">fahrenheit to celsius</button>
+        <div class="modal fade" id="mymodal1" tabindex="-1" role="dialog" aria-labelledby="mymodallabel1" aria-hidden="true">
+
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                            &times;
+                                                    </button>
+                        <h2 class="modal-title" id="mymodallabel1" style="color:navy;">fahrenheit to celsius converter</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p><b>Please enter value: </b></p> <br>
+                        <input type="text" name="fahr" id="txt2" placeholder="enter fahrenheit value" />
+                        <button type="button" name="submit" id="button2" onclick="fahtocel()">See Result</button><br> <br>
+                        <p id="cel2"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="converter.html">Click here for going HomePage</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div></div></div><br><br>
+
+        <div class="row" id="ktm">
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mymodal2">Kilometer to Miles</button>
+        <div class="modal fade" id="mymodal2" tabindex="-1" role="dialog" aria-labelledby="mymodallabel2" aria-hidden="true">
+
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                            &times;
+                                                    </button>
+                        <h2 class="modal-title" id="mymodallabel2" style="color:navy;">Kilometer to Miles converter</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p><b>Please enter value: </b></p> <br>
+                        <input type="text" name="kilo" id="txt3" placeholder="enter kilometer value" />
+                        <button type="button" name="submit" id="button3" onclick="kiltomi()">See Result</button><br> <br>
+                        <p id="cel3"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="converter.html">Click here for going HomePage</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mymodal3">Miles to Kilometer  </button>
+        <div class="modal fade" id="mymodal3" tabindex="-1" role="dialog" aria-labelledby="mymodallabel3" aria-hidden="true">
+
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                                            &times;
+                                                                    </button>
+                        <h2 class="modal-title" id="mymodallabel3" style="color:navy;"> Miles to Kilometer converter</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p><b>Please enter value: </b></p> <br>
+                        <input type="text" name="mile" id="txt4" placeholder="enter miles value" />
+                        <button type="button" name="submit" id="button4" onclick="mitokil()">See Result</button><br> <br>
+                        <p id="cel4"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="converter.html">Click here for going HomePage</a>
+                    </div>
+                </div>
+            </div>
+
+        </div> </div><br> <br>
+
+        <div class="row">
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mymodal4">inch to centimeter  </button>
+        <div class="modal fade" id="mymodal4" tabindex="-1" role="dialog" aria-labelledby="mymodallabel4" aria-hidden="true">
+
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                                                            &times;
+                                                                                    </button>
+                        <h2 class="modal-title" id="mymodallabel4" style="color:navy;"> inch to centimeter converter</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p><b>Please enter value: </b></p> <br>
+                        <input type="text" name="inch" id="txt5" placeholder="enter centimeter value" />
+                        <button type="button" name="submit" id="button5" onclick="intocm()">See Result</button><br> <br>
+                        <p id="cel5"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="converter.html">Click here for going HomePage</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mymodal5">centimeter to inch </button>
+        <div class="modal fade" id="mymodal5" tabindex="-1" role="dialog" aria-labelledby="mymodallabel5" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                                                                            &times;</button>
+                        <h2 class="modal-title" id="mymodallabel5" style="color:navy;"> centimeter to inch converter</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p><b>Please enter value: </b></p> <br>
+                        <input type="text" name="cm" id="txt6" placeholder="enter inch value" />
+                        <button type="button" name="submit" id="button6" onclick="cmtoin()">See Result</button><br> <br>
+                        <p id="cel6"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="converter.html">Click here for going HomePage</a>
+                    </div>
+                </div>
+            </div>
+
+        </div></div> <br> <br>
+
+        <div class="row">
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mymodal6">Dollar to taka</button>
+        <div class="modal fade" id="mymodal6" tabindex="-1" role="dialog" aria-labelledby="mymodallabel6" aria-hidden="true">
+
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                               &times;
+                                       </button>
+                        <h2 class="modal-title" id="mymodallabel6" style="color:navy;">Dollar to taka converter</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p><b>Please enter value: </b></p> <br>
+                        <input type="text" name="dollar" id="txt7" placeholder="enter taka value" />
+                        <button type="button" name="submit" id="button7" onclick="doltotk()">See Result</button><br> <br>
+                        <p id="cel7"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="converter.html">Click here for going HomePage</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mymodal7">Taka to Dollar</button>
+        <div class="modal fade" id="mymodal7" tabindex="-1" role="dialog" aria-labelledby="mymodallabel7" aria-hidden="true">
+
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                               &times;
+                                                       </button>
+                        <h2 class="modal-title" id="mymodallabel7" style="color:navy;">Taka to Dollar converter</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p><b>Please enter value: </b></p> <br>
+                        <input type="text" name="taka" id="txt8" placeholder="enter dollar value" />
+                        <button type="button" name="submit" id="button8" onclick="tktodol()">See Result</button><br> <br>
+                        <p id="cel8"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="converter.html">Click here for going HomePage</a>
+                    </div>
+                </div>
+            </div>
+
+        </div></div><br><br>
+
+        <div class="row">
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mymodal8">Cetimeter to Meter</button>
+        <div class="modal fade" id="mymodal8" tabindex="-1" role="dialog" aria-labelledby="mymodallabel8" aria-hidden="true">
+
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                               &times;
+                                                       </button>
+                        <h2 class="modal-title" id="mymodallabel8" style="color:navy;">Cetimeter to Meter converter</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p><b>Please enter value: </b></p> <br>
+                        <input type="text" name="centimeter" id="txt9" placeholder="enter centimeter value" />
+                        <button type="button" name="submit" id="button9" onclick="cmtome()">See Result</button><br> <br>
+                        <p id="cel9"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="converter.html">Click here for going HomePage</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mymodal9">meter to centimeter </button>
+        <div class="modal fade" id="mymodal9" tabindex="-1" role="dialog" aria-labelledby="mymodallabel9" aria-hidden="true">
+
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                                               &times;
+                                                                       </button>
+                        <h2 class="modal-title" id="mymodallabel9" style="color:navy;"> meter to centimeter  converter</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p><b>Please enter value: </b></p> <br>
+                        <input type="text" name="meter" id="txt10" placeholder="enter meter value" />
+                        <button type="button" name="submit" id="button10" onclick="metocm()">See Result</button><br> <br>
+                        <p id="cel10"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="converter.html">Click here for going HomePage</a>
+                    </div>
+                </div>
+            </div>
+
+        </div> </div> <br> <br>
+
+        <div class="row">
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mymodal10">kilogram to gram  </button>
+        <div class="modal fade" id="mymodal10" tabindex="-1" role="dialog" aria-labelledby="mymodallabel10" aria-hidden="true">
+
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                                                               &times;
+                                                                                       </button>
+                        <h2 class="modal-title" id="mymodallabel10" style="color:navy;"> kilogram to gram converter</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p><b>Please enter value: </b></p> <br>
+                        <input type="text" name="kilo" id="txt11" placeholder="enter kilogram value" />
+                        <button type="button" name="submit" id="button11" onclick="kgtogr()">See Result</button><br> <br>
+                        <p id="cel11"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="converter.html">Click here for going HomePage</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mymodal11">gram to kilogram </button>
+        <div class="modal fade" id="mymodal11" tabindex="-1" role="dialog" aria-labelledby="mymodallabel11" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                                                                               &times;</button>
+                        <h2 class="modal-title" id="mymodallabel11" style="color:navy;"> gram to kilogram converter</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p><b>Please enter value: </b></p> <br>
+                        <input type="text" name="gram" id="txt12" placeholder="enter gram value" />
+                        <button type="button" name="submit" id="button12" onclick="grtokg()">See Result</button><br> <br>
+                        <p id="cel12"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="converter.html">Click here for going HomePage</a>
+                    </div>
+                </div>
+            </div>
+
+        </div> </div> <br> <br>
+
+        <div class="row">
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mymodal12">Degree to Radius</button>
+        <div class="modal fade" id="mymodal12" tabindex="-1" role="dialog" aria-labelledby="mymodallabel12" aria-hidden="true">
+
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                               &times;
+                                       </button>
+                        <h2 class="modal-title" id="mymodallabel12" style="color:navy;">Degree to Radius converter</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p><b>Please enter value: </b></p> <br>
+                        <input type="text" name="degree" id="txt13" placeholder="enter degree value" />
+                        <button type="button" name="submit" id="button13" onclick="degtorad()">See Result</button><br> <br>
+                        <p id="cel13"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="converter.html">Click here for going HomePage</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mymodal13">radius to degree</button>
+        <div class="modal fade" id="mymodal13" tabindex="-1" role="dialog" aria-labelledby="mymodallabel13" aria-hidden="true">
+
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                               &times;
+                                                       </button>
+                        <h2 class="modal-title" id="mymodallabel13" style="color:navy;">Radius to Degree converter</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p><b>Please enter value: </b></p> <br>
+                        <input type="text" name="radius" id="txt14" placeholder="enter radius value" />
+                        <button type="button" name="submit" id="button14" onclick="radtodeg()">See Result</button><br> <br>
+                        <p id="cel14"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="converter.html">Click here for going HomePage</a>
+                    </div>
+                </div>
+            </div>
+
+        </div></div><br><br>
+
+
+        <div class="row">
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mymodal14">minute to hour</button>
+        <div class="modal fade" id="mymodal14" tabindex="-1" role="dialog" aria-labelledby="mymodallabel14" aria-hidden="true">
+
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                               &times;
+                                                       </button>
+                        <h2 class="modal-title" id="mymodallabel14" style="color:navy;">Minute to Hour converter</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p><b>Please enter value: </b></p> <br>
+                        <input type="text" name="min" id="txt15" placeholder="enter minute value" />
+                        <button type="button" name="submit" id="button15" onclick="mintohr()">See Result</button><br> <br>
+                        <p id="cel15"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="converter.html">Click here for going HomePage</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mymodal15">hour to minute </button>
+        <div class="modal fade" id="mymodal15" tabindex="-1" role="dialog" aria-labelledby="mymodallabel15" aria-hidden="true">
+
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                                               &times;
+                                                                       </button>
+                        <h2 class="modal-title" id="mymodallabel15" style="color:navy;"> Hour to Minute converter</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p><b>Please enter value: </b></p> <br>
+                        <input type="text" name="hour" id="txt16" placeholder="enter hour value" />
+                        <button type="button" name="submit" id="button16" onclick="hrtomin()">See Result</button><br> <br>
+                        <p id="cel16"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="converter.html">Click here for going HomePage</a>
+                    </div>
+                </div>
+            </div>
+
+        </div> </div> <br> <br>
+
+       <div class="row" id="stm">
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mymodal16" id="mts">minute to second </button>
+        <div class="modal fade" id="mymodal16" tabindex="-1" role="dialog" aria-labelledby="mymodallabel16" aria-hidden="true">
+
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                                                               &times;
+                                                                                       </button>
+                        <h2 class="modal-title" id="mymodallabel16" style="color:navy;"> minute to second converter</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p><b>Please enter value: </b></p> <br>
+                        <input type="text" name="min" id="txt17" placeholder="enter minute value" />
+                        <button type="button" name="submit" id="button17" onclick="mintosec()">See Result</button><br> <br>
+                        <p id="cel17"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="converter.html">Click here for going HomePage</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mymodal17">second to minute </button>
+        <div class="modal fade" id="mymodal17" tabindex="-1" role="dialog" aria-labelledby="mymodallabel17" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                                                                               &times;</button>
+                        <h2 class="modal-title" id="mymodallabel17" style="color:navy;"> Second to Minute converter</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p><b>Please enter value: </b></p> <br>
+                        <input type="text" name="sec" id="txt18" placeholder="enter second value" />
+                        <button type="button" name="submit" id="button18" onclick="sectomin()">See Result</button><br> <br>
+                        <p id="cel18"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="converter.html">Click here for going HomePage</a>
+                    </div>
+                </div>
+            </div>
+
+        </div></div>  <br> <br>
+
+  
+ 
+    <footer class="text-center" style="position:fixed;right:0px;bottom:0px;left: 0px; background-color:black;color:aliceblue">
+      <p style="text-align:center">E-mail:nusrat.codesmith@gmail.com</p>
+      <p style="text-align: center">Phone:01682697335</p>  
+     </footer>
+    </div> 
+</body>
+
+</html>
